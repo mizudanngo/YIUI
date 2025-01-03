@@ -18,6 +18,11 @@ namespace I2.Loc
         // Because of Unity2018.3 change in Prefabs, now all the source variables are moved into LanguageSourceData
         // But to avoid loosing previously serialized data, these vars are copied into mSource.XXXX when deserializing)
         // These are going to be removed once everyone port their projects to the new I2L version.
+        /*
+         由于预制件中Unity2018.3的更改，现在所有源变量都移动到LanguageSourceData中
+         但是为了避免丢失之前序列化的数据，这些变量被复制到mSource中。XXXX反序列化时）
+         一旦每个人都将他们的项目移植到新的I2L版本，这些将被删除。
+        */
         #region Legacy Variables 
 
         // TODO: also copy         public string name;   and owner

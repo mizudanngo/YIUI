@@ -8,6 +8,7 @@ namespace YIUIFramework
 {
     /// <summary>
     /// Mono的Update调度器
+    /// TIP：目前只有红点系统需要用到
     /// </summary>
     [DisallowMultipleComponent]
     public sealed partial class SchedulerMgr : MonoSingleton<SchedulerMgr>

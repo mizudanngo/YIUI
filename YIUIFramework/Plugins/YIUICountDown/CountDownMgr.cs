@@ -12,6 +12,8 @@ namespace YIUIFramework
 {
     /*
      * REVIEW: 考虑替换掉这个倒计时管理器
+     * TIP：目前用来计算YIUI界面停留时间
+     * 仅在该PanelMgr_Block文件里使用过
      */
     
     /// <summary>
