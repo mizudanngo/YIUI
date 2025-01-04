@@ -21,11 +21,11 @@ namespace YIUIFramework
         public RectTransform AllViewParent;
 
         [BoxGroup("通用界面", centerLabel: true)]
-        [LabelText("所有通用界面(已存在不创建的)")]
+        [LabelText("所有通用界面(默认存在的)")]
         public List<RectTransform> AllCommonView = new List<RectTransform>();
 
         [BoxGroup("通用界面", centerLabel: true)]
-        [LabelText("所有需要被创建的界面")]
+        [LabelText("所有需要[动态创建]的界面")]
         public List<RectTransform> AllCreateView = new List<RectTransform>();
 
         [BoxGroup("弹窗界面", centerLabel: true)]
@@ -34,7 +34,7 @@ namespace YIUIFramework
         public RectTransform AllPopupViewParent;
 
         [BoxGroup("弹窗界面", centerLabel: true)]
-        [LabelText("所有弹出界面")]
+        [LabelText("所有弹出界面[动态创建]")]
         public List<RectTransform> AllPopupView = new List<RectTransform>();
     }
 }

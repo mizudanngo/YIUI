@@ -5,6 +5,7 @@ namespace YIUIFramework
 {
     /// <summary>
     /// 不可见的一个图，用来阻挡UI的投射。
+    /// TIP: 在每个Panel中，放置在底部，用来防止当前Panel接收到的投射穿透到后面的Panel
     /// </summary>
     public class UIBlock : Graphic, ICanvasRaycastFilter
     {

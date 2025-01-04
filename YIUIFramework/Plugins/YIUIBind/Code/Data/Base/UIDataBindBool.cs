@@ -21,7 +21,7 @@ namespace YIUIBind
         [SerializeField]
         [LabelText("所有结果逻辑")]
         #if UNITY_EDITOR
-        [EnableIf("@UIOperationHelper.CommonShowIf()")]
+        [EnableIf(nameof(Enable))]
         #endif
         private UIBooleanLogic m_BooleanLogic = UIBooleanLogic.And;
 
@@ -29,7 +29,7 @@ namespace YIUIBind
         [LabelText("所有计算结果的变量")]
         [ListDrawerSettings(IsReadOnly = true)]
         #if UNITY_EDITOR
-        [EnableIf("@UIOperationHelper.CommonShowIf()")]
+        [EnableIf(nameof(Enable))]
         #endif
         private List<UIDataBoolRef> m_Datas = new List<UIDataBoolRef>();
 

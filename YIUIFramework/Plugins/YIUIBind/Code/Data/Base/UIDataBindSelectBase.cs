@@ -26,7 +26,7 @@ namespace YIUIBind
             DisplayMode = DictionaryDisplayOptions.ExpandedFoldout)]
         [ReadOnly]
         #if UNITY_EDITOR
-        [EnableIf("@UIOperationHelper.CommonShowIf()")]
+        [EnableIf(nameof(Enable))]
         #endif
         private Dictionary<string, UIDataSelect> m_DataSelectDic = new Dictionary<string, UIDataSelect>();
 

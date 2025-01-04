@@ -144,6 +144,7 @@ namespace YIUIFramework
                 if (current.name == UIStaticHelper.UIYIUIViewParentName)
                 {
                     Debug.LogError($"当前是默认名称 请手动修改名称 Xxx{UIStaticHelper.UIViewParentName}");
+                    Debug.LogError($"{current.name} 游戏对象将被移除检测范围，请重新通过菜单创建新的View");
                     list.RemoveAt(i);
                     continue;
                 }
@@ -151,6 +152,7 @@ namespace YIUIFramework
                 if (!current.name.EndsWith(UIStaticHelper.UIViewParentName))
                 {
                     Debug.LogError($"{current.name} 命名必须以 {UIStaticHelper.UIViewParentName} 结尾 请勿随意修改");
+                    Debug.LogError($"{current.name} 游戏对象将被移除检测范围，请重新通过菜单创建新的View");
                     list.RemoveAt(i);
                     continue;
                 }
@@ -171,6 +173,7 @@ namespace YIUIFramework
                 if (viewCde == null)
                 {
                     Debug.LogError($" {current.name} 父物体下必须有View  但是未找到View 请使用 右键 YIUI/Create UIView 创建符合要求的结构");
+                    Debug.LogError($"{current.name} 游戏对象将被移除检测范围，请重新通过菜单创建新的View");
                     list.RemoveAt(i);
                     continue;
                 }

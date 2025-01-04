@@ -20,7 +20,7 @@ namespace YIUIFramework
     public sealed partial class UIBindCDETable : SerializedMonoBehaviour
     {    
 #if UNITY_EDITOR
-        private bool Enable => UIOperationHelper.CommonShowIf();
+        protected bool Enable => UIOperationHelper.CommonShowIf();
         
         [InlineButton(nameof(AddComponentTable), "Add"), EnableIf(nameof(Enable))]
 #endif // UNITY_EDITOR

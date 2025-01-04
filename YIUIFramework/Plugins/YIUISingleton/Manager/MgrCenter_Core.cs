@@ -60,7 +60,7 @@ namespace YIUIFramework
                 m_CacheInitMgr.Remove(manager);
 
                 #if YIUIMACRO_SINGLETON_LOG
-                Debug.Log($"<color=navy>MgrCenter: 管理器[<color=Brown>{manager.GetType().Name}</color>]启动完毕</color>");
+                Debug.Log($"<color=cyan>MgrCenter: 管理器[<color=Brown>{manager.GetType().Name}</color>]启动完毕</color>");
                 #endif
 
                 m_MgrList.Add(manager);

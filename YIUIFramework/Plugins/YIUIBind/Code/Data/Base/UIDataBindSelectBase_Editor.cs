@@ -10,7 +10,7 @@ namespace YIUIBind
 {
     public abstract partial class UIDataBindSelectBase
     {
-        private bool Enable => UIOperationHelper.CommonShowIf();
+        protected bool Enable => UIOperationHelper.CommonShowIf();
         
         [ValueDropdown(nameof(GetBindKeys))]
         [OnValueChanged(nameof(OnBindKeySelected)), ShowIf(nameof(Enable))]
