@@ -13,6 +13,7 @@ namespace YIUIBind
 	[AddComponentMenu("YIUIBind/Data/颜色 【Color】 UIDataBindGraphic")]
 	public class UIDataBindGraphic : UIDataBindSelectBase
 	{
+		
 		[SerializeField]
 		[LabelText("所有结果逻辑")]
 #if UNITY_EDITOR
@@ -29,8 +30,8 @@ namespace YIUIBind
 		private List<UIDataBoolRef> m_Datas = new List<UIDataBoolRef>();
 		
 		[SerializeField]
-        [LabelText("Normal Color")]
-        private Color m_NormalColor = Color.white;
+		[LabelText("Normal Color")]
+		private Color m_NormalColor = Color.white;
         
 		[SerializeField]
 		[LabelText("Focus Color")]
@@ -64,6 +65,8 @@ namespace YIUIBind
 
 		protected override void OnValueChanged()
 		{
+			return;
+			// TODO:
 			var dataValue = GetFirstValue<Color>();
 
 			
