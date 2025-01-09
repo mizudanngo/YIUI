@@ -12,6 +12,8 @@ namespace YIUIBind
     {
         protected bool Enable => UIOperationHelper.CommonShowIf();
         
+        private bool NotBindData => m_DataSelectDic.Count == 0;
+        
         [ValueDropdown(nameof(GetBindKeys))]
         [OnValueChanged(nameof(OnBindKeySelected)), ShowIf(nameof(Enable))]
         [LabelText("选择绑定数据"), ShowInInspector, PropertyOrder(-10), NonSerialized]

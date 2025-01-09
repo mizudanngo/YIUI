@@ -25,6 +25,7 @@ namespace YIUIBind
         [DictionaryDrawerSettings(KeyLabel = "数据名称", ValueLabel = "数据内容", IsReadOnly = true,
             DisplayMode = DictionaryDisplayOptions.ExpandedFoldout)]
         [ReadOnly]
+        [InfoBox("未绑定任意数据", InfoMessageType.Error, nameof(NotBindData))]
         #if UNITY_EDITOR
         [EnableIf(nameof(Enable))]
         #endif
