@@ -6,7 +6,6 @@ using MonKey;
 using Sirenix.OdinInspector;
 using Sirenix.OdinInspector.Editor;
 using Sirenix.Utilities.Editor;
-using YIUIBind;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.U2D;
@@ -85,7 +84,8 @@ namespace YIUIFramework.Editor
         {
             new CreateUIBindProviderModule().Create();
         }
-
+        
+        /// 无法将其改为Monkey命令行，因为所用对象是只有打开YIUI窗口才会创建的，不用试了！！！
         [Button("全部发布", 50), GUIColor(0.4f, 0.8f, 1), PropertyOrder(-99)]
         public void PublishAll()
         {

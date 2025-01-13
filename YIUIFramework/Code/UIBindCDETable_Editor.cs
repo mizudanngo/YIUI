@@ -277,17 +277,20 @@ namespace YIUIFramework
         {
             if (!UIOperationHelper.CheckUIOperation(this)) return;
 
-            if (IsSplitData)
+            UnityTipsHelper.CallBackOk($"生成新的预制体将会覆盖原有预制体（第一次操作可忽略）", () =>
             {
-                if (AutoCheck())
+                if (IsSplitData)
                 {
-                    UIPanelSourceSplit.Do(this);
+                    if (AutoCheck())
+                    {
+                        UIPanelSourceSplit.Do(this);
+                    }
                 }
-            }
-            else
-            {
-                UnityTipsHelper.ShowError($"{name} 当前数据不是源数据 无法进行拆分 请检查数据");
-            }
+                else
+                {
+                    UnityTipsHelper.ShowError($"{name} 当前数据不是源数据 无法进行拆分 请检查数据");
+                }    
+            });
         }
 
         internal void CreateUICode(bool refresh, bool tips)
