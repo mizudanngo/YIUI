@@ -82,7 +82,7 @@ namespace YIUIFramework
         [MinValue(0)]
         private int m_ResolutionY = 512;
 
-        [LabelText("深度值")] //默认16
+        [LabelText("深度值")] //默认16，可选为：[0, 16, 24]
         private readonly int m_RenderTextureDepthBuffer = 16;
 
         [OdinSerialize]

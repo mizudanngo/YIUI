@@ -25,7 +25,7 @@ namespace YIUIFramework
                 return m_ExistView[viewName];
             }
             
-            var view = await YIUIFactory.InstantiateAsync(UIPkgName, viewName) as BaseView;
+            var view = await YIUIFactory.InstantiateAsync(UIPkgName, viewName, parent) as BaseView;
             
             m_ExistView.Add(viewName, view);
 
